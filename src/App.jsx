@@ -372,21 +372,29 @@ function ProductsPage() {
 
 function OffersPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-[#E63900] text-white py-16 text-center">
-        <h1 className="text-4xl font-black">Special Offers</h1>
+    <div className="min-h-screen bg-stone-50">
+      <section className="bg-gradient-to-b from-[#E63900] to-[#C43200] text-white py-16 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=1200" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <div className="text-4xl mb-3">🏷️ 🎁 🔥</div>
+          <h1 className="text-5xl font-black mb-2">Special Offers</h1>
+          <p className="text-xl text-orange-200">Best deals & discounts for you!</p>
+        </div>
       </section>
-      <section className="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+      <section className="max-w-5xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
         {productsData.offers.map(offer => (
-          <div key={offer.id} className="bg-white rounded-xl overflow-hidden shadow-lg">
-            <img src={offer.image} className="w-full h-40 object-cover" alt={offer.title} />
-            <div className="p-4">
-              <span className="bg-[#E63900] text-white text-xs font-bold px-2 py-1 rounded">{offer.discount}</span>
-              <h3 className="font-bold mt-2">{offer.title}</h3>
-              <p className="text-sm text-gray-500">{offer.description}</p>
-              <div className="mt-3 flex justify-between items-center">
-                <span className="text-xs bg-gray-100 px-2 py-1 rounded">Code: {offer.code}</span>
-                <button onClick={() => {navigator.clipboard.writeText(offer.code); alert('Copied!')}} className="text-sm text-[#E63900] font-bold">Copy</button>
+          <div key={offer.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-2 border-transparent hover:border-[#E63900]">
+            <div className="relative h-48">
+              <img src={offer.image} className="w-full h-full object-cover" alt={offer.title} />
+              <div className="absolute top-3 right-3 bg-[#E63900] text-white font-black px-4 py-1.5 rounded-full text-lg">{offer.discount}</div>
+            </div>
+            <div className="p-5">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">{offer.title}</h3>
+              <p className="text-stone-500 text-sm mb-4">{offer.description}</p>
+              <div className="bg-stone-100 rounded-xl p-3 flex justify-between items-center">
+                <span className="font-bold text-stone-600">Code: {offer.code}</span>
+                <button onClick={() => {navigator.clipboard.writeText(offer.code); alert('Copied!')}} className="bg-[#E63900] text-white font-bold px-4 py-1.5 rounded-lg hover:bg-[#C43200] transition-colors">Copy</button>
               </div>
             </div>
           </div>
@@ -398,26 +406,69 @@ function OffersPage() {
 
 function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gray-900 text-white py-16 text-center">
-        <h1 className="text-4xl font-black">About Us</h1>
-        <p className="text-gray-400">Since 2019 in Riyadh</p>
+    <div className="min-h-screen bg-stone-50">
+      <section className="bg-gradient-to-b from-[#E63900] to-[#C43200] text-white py-16 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <div className="text-4xl mb-3">ℹ️ 🍛 🌶️</div>
+          <h1 className="text-5xl font-black mb-2">About Us</h1>
+          <p className="text-xl text-orange-200">Since 2019 in Riyadh</p>
+        </div>
       </section>
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold mb-4">Our Story</h2>
-        <p className="text-gray-600 leading-relaxed">{BUSINESS.name} brings authentic Indo-Chinese cuisine and aromatic Biryani to Riyadh. Our chefs combine traditional recipes with fresh ingredients.</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      <section className="max-w-4xl mx-auto px-4 py-10">
+        <div className="bg-white rounded-2xl p-8 shadow-lg border border-stone-200 mb-8">
+          <h2 className="text-2xl font-black text-stone-800 mb-4">Our Story</h2>
+          <p className="text-stone-600 leading-relaxed text-lg mb-4">{BUSINESS.name} brings authentic Indo-Chinese cuisine and aromatic Biryani to the heart of Riyadh. Our chefs combine traditional recipes passed down through generations with the freshest ingredients to create dishes that burst with flavor.</p>
+          <p className="text-stone-600 leading-relaxed text-lg">Since 2019, we've been serving the community with our signature dishes - from crispy Chicken Lollipop to aromatic Chicken Biryani. Every dish is crafted with love and care.</p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
-            { v: `★ ${BUSINESS.rating}`, l: 'Rating' },
-            { v: `${BUSINESS.reviews}+`, l: 'Reviews' },
-            { v: '20+', l: 'Dishes' },
-            { v: '365', l: 'Days Open' },
+            { v: `★ ${BUSINESS.rating}`, l: 'Rating', image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400' },
+            { v: `${BUSINESS.reviews}+`, l: 'Reviews', image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=400' },
+            { v: '50+', l: 'Dishes', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400' },
+            { v: '365', l: 'Days Open', image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400' },
           ].map((i, k) => (
-            <div key={k} className="bg-gray-100 p-4 rounded-xl text-center">
-              <div className="text-2xl font-black">{i.v}</div>
-              <div className="text-sm text-gray-500">{i.l}</div>
+            <div key={k} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="h-24 overflow-hidden relative">
+                <img src={i.image} alt={i.l} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+              <div className="p-4 text-center">
+                <div className="text-2xl font-black text-[#E63900]">{i.v}</div>
+                <div className="text-sm text-stone-500 font-bold">{i.l}</div>
+              </div>
             </div>
           ))}
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {[
+            { title: 'Fresh Ingredients', desc: 'We use only the freshest ingredients sourced daily', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400' },
+            { title: 'Authentic Recipes', desc: 'Traditional recipes with authentic spices', image: 'https://images.unsplash.com/photo-1567337710282-00832b415979?w=400' },
+            { title: 'Fast Delivery', desc: 'Quick and reliable delivery across Riyadh', image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=400' },
+          ].map((item, i) => (
+            <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
+              <div className="h-40 overflow-hidden">
+                <img src={item.image} alt={item.title} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-bold text-lg text-stone-800">{item.title}</h3>
+                <p className="text-stone-500 text-sm mt-2">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-gradient-to-r from-[#E63900] to-[#FF6B35] rounded-2xl p-8 text-white text-center">
+          <h3 className="text-2xl font-black mb-2">Visit Us Today!</h3>
+          <p className="mb-4 opacity-90">{BUSINESS.locationShort}</p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <a href={`tel:${BUSINESS.phone}`} className="bg-white text-[#E63900] font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform">📞 Call Now</a>
+            <a href={`https://wa.me/${BUSINESS.phone}?text=Hi`} className="bg-[#25D366] font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform">💬 WhatsApp</a>
+            <a href="https://maps.google.com/?q=The+Bombay+Town+Al+Farazdaq+St+Riyadh" className="bg-white/20 font-bold px-6 py-2 rounded-full hover:bg-white/30 transition-colors">📍 Get Directions</a>
+          </div>
         </div>
       </section>
     </div>
