@@ -256,7 +256,7 @@ function MenuPage() {
                   <p className="text-stone-500 text-sm mb-4 line-clamp-2">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-black text-[#E63900]">SAR {item.price}</span>
-                    <a href={`https://wa.me/${BUSINESS.phone}?text=Order:+${encodeURIComponent(item.name)}`} className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-2 rounded-full font-bold text-sm transition-all hover:scale-105">
+                    <a href={`https://wa.me/${BUSINESS.phone}?text=Hi, I want to order ${item.name} - SAR ${item.price}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-2 rounded-full font-bold text-sm transition-all hover:scale-105">
                       <span>Order</span>
                       <span>→</span>
                     </a>
@@ -273,7 +273,7 @@ function MenuPage() {
         <div className="mt-12 bg-gradient-to-r from-[#E63900] to-[#FF6B35] rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-black mb-2">Want to order multiple items?</h3>
           <p className="mb-4 opacity-90">Chat with us on WhatsApp and we'll help you create the perfect meal!</p>
-          <a href={`https://wa.me/${BUSINESS.phone}?text=Hi+I+want+to+order`} className="inline-flex items-center gap-2 bg-white text-[#E63900] px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
+          <a href={`https://wa.me/${BUSINESS.phone}?text=Hi, I want to place an order`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-[#E63900] px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
             <span className="text-xl">💬</span> Order on WhatsApp
           </a>
         </div>
@@ -319,7 +319,7 @@ function ProductsPage() {
 
   const order = () => {
     if (!cart.length) return
-    const msg = cart.map(i => `• ${i.name} - SAR ${i.price}`).join('\n')
+    const msg = cart.map(i => `${i.name} - SAR ${i.price}`).join('\n')
     window.open(`https://wa.me/${BUSINESS.phone}?text=${encodeURIComponent(`Order:\n${msg}\n\nTotal: SAR ${total}`)}`, '_blank')
   }
 
