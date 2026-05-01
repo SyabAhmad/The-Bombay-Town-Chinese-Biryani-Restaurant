@@ -59,32 +59,53 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="bg-stone-900 text-white py-12 mt-auto">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-black text-[#E63900] mb-3">{BUSINESS.name}</h3>
-            <p className="text-stone-400">{BUSINESS.subtitle}</p>
+    <footer className="bg-stone-900 text-white mt-auto">
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 className="text-3xl font-black text-[#E63900] mb-3">{BUSINESS.name}</h3>
+            <p className="text-stone-400 text-lg mb-4">{BUSINESS.subtitle}</p>
+            <p className="text-stone-500 text-sm">{BUSINESS.description}</p>
           </div>
-          <div className="text-center">
-            <h4 className="font-bold mb-3">Contact</h4>
-            <p className="text-stone-400 text-sm mb-2">📍 {BUSINESS.locationShort}</p>
-            <a href={`tel:${BUSINESS.phone}`} className="text-stone-400 text-sm block hover:text-[#E63900]">📞 {BUSINESS.phoneDisplay}</a>
-            <a href={`https://wa.me/${BUSINESS.phone}`} className="text-[#25D366] text-sm font-bold mt-2 inline-block">💬 WhatsApp</a>
-          </div>
-          <div className="text-center md:text-right">
-            <h4 className="font-bold mb-3">Quick Links</h4>
-            <div className="flex flex-col gap-1 text-stone-400 text-sm">
-              <a href="/menu" className="hover:text-[#E63900]">🍽️ Menu</a>
-              <a href="/products" className="hover:text-[#E63900]">🛒 Products</a>
-              <a href="/offers" className="hover:text-[#E63900]">🏷️ Offers</a>
-              <a href="/about" className="hover:text-[#E63900]">ℹ️ About</a>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-stone-800 rounded-2xl p-4 hover:bg-stone-700 transition-colors">
+              <img src="https://images.unsplash.com/photo-1529154036614-a60975f5c760?w=200" alt="Location" className="w-full h-24 object-cover rounded-xl mb-3" />
+              <p className="text-stone-400 text-sm">📍 {BUSINESS.locationShort}</p>
+              <a href="https://maps.google.com/?q=The+Bombay+Town+Al+Farazdaq+St+Riyadh" className="text-[#E63900] text-sm font-bold">Get Directions →</a>
+            </div>
+            <div className="bg-stone-800 rounded-2xl p-4 hover:bg-stone-700 transition-colors">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200" alt="Contact" className="w-full h-24 object-cover rounded-xl mb-3" />
+              <p className="text-stone-400 text-sm">📞 {BUSINESS.phoneDisplay}</p>
+              <a href={`tel:${BUSINESS.phone}`} className="text-[#E63900] text-sm font-bold">Call Now →</a>
             </div>
           </div>
         </div>
+        
+        <div className="border-t border-stone-800 pt-6 mb-6">
+          <h4 className="font-bold mb-4 text-center">Quick Links</h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="/menu" className="bg-stone-800 hover:bg-[#E63900] px-4 py-2 rounded-full text-sm font-bold transition-colors">🍽️ Menu</a>
+            <a href="/products" className="bg-stone-800 hover:bg-[#E63900] px-4 py-2 rounded-full text-sm font-bold transition-colors">🛒 Products</a>
+            <a href="/offers" className="bg-stone-800 hover:bg-[#E63900] px-4 py-2 rounded-full text-sm font-bold transition-colors">🏷️ Offers</a>
+            <a href="/about" className="bg-stone-800 hover:bg-[#E63900] px-4 py-2 rounded-full text-sm font-bold transition-colors">ℹ️ About</a>
+          </div>
+        </div>
+        
+        <div className="flex justify-center gap-4 mb-6">
+          <a href={`https://wa.me/${BUSINESS.phone}`} className="bg-[#25D366] hover:bg-[#20BD5A] p-3 rounded-full transition-colors">
+            <span className="text-xl">💬</span>
+          </a>
+          <a href={`tel:${BUSINESS.phone}`} className="bg-stone-800 hover:bg-[#E63900] p-3 rounded-full transition-colors">
+            <span className="text-xl">📞</span>
+          </a>
+          <a href="https://maps.google.com/?q=The+Bombay+Town+Al+Farazdaq+St+Riyadh" className="bg-stone-800 hover:bg-[#E63900] p-3 rounded-full transition-colors">
+            <span className="text-xl">📍</span>
+          </a>
+        </div>
+        
         <div className="border-t border-stone-800 pt-6 text-center">
-          <p className="text-stone-500 text-sm">© 2024 {BUSINESS.name}. All rights reserved.</p>
-          <p className="text-stone-600 text-xs mt-1">Open: {BUSINESS.hours}</p>
+          <p className="text-stone-500">© 2024 {BUSINESS.name}. All rights reserved.</p>
+          <p className="text-stone-600 text-sm mt-1">🕐 Open: {BUSINESS.hours}</p>
         </div>
       </div>
     </footer>
