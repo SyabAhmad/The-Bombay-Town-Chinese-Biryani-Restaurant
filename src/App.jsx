@@ -170,35 +170,91 @@ function Home() {
 
 function MenuPage() {
   const [cat, setCat] = useState('starters')
+  const [search, setSearch] = useState('')
   const cur = MENU.categories.find(c => c.id === cat)
+  const categoryIcons = { starters: '🥟', soups: '🍲', 'rice-noodles': '🍜', 'main-course': '🍛', biryani: '🍚', drinks: '🥤', desserts: '🍰', combos: '🎁' }
+  
+  const filteredItems = search ? cur.items.filter(i => i.name.toLowerCase().includes(search.toLowerCase())) : cur.items
+  
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-[#E63900] text-white py-12 text-center">
-        <h1 className="text-4xl font-black">Our Menu</h1>
-        <p className="text-orange-200">Fresh ingredients • Authentic recipes</p>
+    <div className="min-h-screen bg-stone-50">
+      <section className="bg-gradient-to-b from-[#E63900] to-[#C43200] text-white py-16 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <div className="text-4xl mb-3">🍽️ 🌶️ 🍛</div>
+          <h1 className="text-5xl font-black mb-3">Our Menu</h1>
+          <p className="text-xl text-orange-200 mb-6">Fresh ingredients • Authentic recipes • Flavorful dishes</p>
+          <div className="relative max-w-md mx-auto">
+            <input type="text" placeholder="Search dishes..." value={search} onChange={e => setSearch(e.target.value)} className="w-full px-5 py-3 pl-12 rounded-2xl text-gray-900 text-lg shadow-lg" />
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">🔍</span>
+          </div>
+        </div>
       </section>
-      <div className="sticky top-14 bg-white shadow-md z-40">
-        <div className="max-w-4xl mx-auto px-4 flex gap-2 py-3 overflow-x-auto">
-          {MENU.categories.map(c => (
-            <button key={c.id} onClick={() => setCat(c.id)} className={`px-4 py-2 rounded-full text-sm font-bold ${cat === c.id ? 'bg-[#E63900] text-white' : 'bg-gray-100'}`}>{c.name}</button>
-          ))}
+      
+      <div className="sticky top-14 bg-white shadow-lg z-40 border-b-4 border-[#E63900]">
+        <div className="max-w-5xl mx-auto px-4 py-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            {MENU.categories.map(c => (
+              <button key={c.id} onClick={() => {setCat(c.id); setSearch('')}} className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-bold transition-all ${cat === c.id ? 'bg-[#E63900] text-white shadow-lg' : 'bg-stone-100 text-stone-600 hover:bg-stone-200'}`}>
+                <span className="text-lg">{categoryIcons[c.id] || '🍽️'}</span>
+                <span>{c.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <h2 className="text-xl font-bold mb-4">{cur.name}</h2>
-        <div className="space-y-3">
-          {cur.items.map(item => (
-            <div key={item.id} className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border">
-              <div>
-                <h3 className="font-bold">{item.name}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
-              </div>
-              <div className="text-right">
-                <p className="text-xl font-black text-[#E63900]">SAR {item.price}</p>
-                <a href={`https://wa.me/${BUSINESS.phone}?text=Order:${item.name}`} className="text-xs bg-[#25D366] text-white px-3 py-1 rounded-lg">Order</a>
+      
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            <span className="text-4xl">{categoryIcons[cat] || '🍽️'}</span>
+            <div>
+              <h2 className="text-3xl font-black text-stone-800">{cur.name}</h2>
+              <p className="text-stone-500">{filteredItems.length} dishes available</p>
+            </div>
+          </div>
+        </div>
+        
+        {search && (
+          <div className="bg-orange-100 border border-orange-300 rounded-xl p-3 mb-6 text-center">
+            <span className="text-orange-800 font-medium">Showing {filteredItems.length} results for "{search}"</span>
+            <button onClick={() => setSearch('')} className="ml-2 text-orange-600 underline text-sm">Clear</button>
+          </div>
+        )}
+        
+        <div className="grid md:grid-cols-2 gap-5">
+          {filteredItems.map((item, idx) => (
+            <div key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border-2 border-transparent hover:border-[#E63900]">
+              <div className="flex">
+                <div className="flex-1 p-5">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-bold text-lg text-stone-800 group-hover:text-[#E63900] transition-colors">{item.name}</h3>
+                    <span className="bg-orange-100 text-orange-700 text-xs font-bold px-2 py-1 rounded-full">{idx + 1}</span>
+                  </div>
+                  <p className="text-stone-500 text-sm mb-4 line-clamp-2">{item.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-black text-[#E63900]">SAR {item.price}</span>
+                    <a href={`https://wa.me/${BUSINESS.phone}?text=Order:+${encodeURIComponent(item.name)}`} className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-2 rounded-full font-bold text-sm transition-all hover:scale-105">
+                      <span>Order</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="w-28 h-28 md:w-32 md:h-32 flex-shrink-0">
+                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 bg-gradient-to-r from-[#E63900] to-[#FF6B35] rounded-2xl p-8 text-white text-center">
+          <h3 className="text-2xl font-black mb-2">Want to order multiple items?</h3>
+          <p className="mb-4 opacity-90">Chat with us on WhatsApp and we'll help you create the perfect meal!</p>
+          <a href={`https://wa.me/${BUSINESS.phone}?text=Hi+I+want+to+order`} className="inline-flex items-center gap-2 bg-white text-[#E63900] px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
+            <span className="text-xl">💬</span> Order on WhatsApp
+          </a>
         </div>
       </section>
     </div>
