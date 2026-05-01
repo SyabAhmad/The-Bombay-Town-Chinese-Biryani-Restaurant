@@ -271,23 +271,14 @@ function ProductsPage() {
   const [cart, setCart] = useState([])
 
   useEffect(() => {
-    const fetchItems = async () => {
-      setLoading(true)
-      const all = []
-      const cats = ['starters', 'soups', 'rice-noodles', 'main-course', 'biryani', 'drinks', 'desserts', 'combos']
-      for (const c of cats) {
-        try {
-          const res = await fetch(`/data/${c}.json`)
-          if (res.ok) {
-            const d = await res.json()
-            all.push(...d.items.map(i => ({ ...i, category: d.name })))
-          }
-        } catch {}
-      }
-      setItems(all)
-      setLoading(false)
-    }
-    fetchItems()
+    const all = []
+    MENU.categories.forEach(c => {
+      c.items.forEach(i => {
+        all.push({ ...i, category: c.name })
+      })
+    })
+    setItems(all)
+    setLoading(false)
   }, [])
 
   useEffect(() => setPage(1), [search, cat])
@@ -311,16 +302,29 @@ function ProductsPage() {
     window.open(`https://wa.me/${BUSINESS.phone}?text=${encodeURIComponent(`Order:\n${msg}\n\nTotal: SAR ${total}`)}`, '_blank')
   }
 
+  const categoryIcons = { 'Starters': '🥟', 'Soups': '🍲', 'Rice & Noodles': '🍜', 'Main Course': '🍛', 'Biryani': '🍚', 'Drinks': '🥤', 'Desserts': '🍰', 'Combos': '🎁' }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-[#E63900] text-white py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-3xl font-black mb-4">All Products</h1>
-          <input type="text" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value)} className="w-full max-w-md px-4 py-2 rounded-xl text-gray-900" />
-          <div className="flex gap-2 mt-4 overflow-x-auto">
-            <button onClick={() => setCat('all')} className={`px-3 py-1 rounded-full text-sm ${cat === 'all' ? 'bg-white text-[#E63900]' : 'bg-white/20'}`}>All</button>
+    <div className="min-h-screen bg-stone-50">
+      <section className="bg-gradient-to-b from-[#E63900] to-[#C43200] text-white py-14 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div className="text-4xl mb-3">🛒 🍜 🍛</div>
+          <h1 className="text-4xl font-black mb-2">All Products</h1>
+          <p className="text-orange-200 text-lg mb-6">Browse our complete menu collection</p>
+          <div className="relative max-w-lg mx-auto mb-6">
+            <input type="text" placeholder="Search for dishes..." value={search} onChange={e => setSearch(e.target.value)} className="w-full px-5 py-3.5 pl-12 rounded-2xl text-gray-900 text-lg shadow-lg placeholder:text-gray-400" />
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">🔍</span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            <button onClick={() => setCat('all')} className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all ${cat === 'all' ? 'bg-white text-[#E63900] shadow-lg' : 'bg-white/20 hover:bg-white/30'}`}>
+              <span>📋</span><span>All</span>
+            </button>
             {uniqueCats.map(c => (
-              <button key={c} onClick={() => setCat(c)} className={`px-3 py-1 rounded-full text-sm ${cat === c ? 'bg-white text-[#E63900]' : 'bg-white/20'}`}>{c}</button>
+              <button key={c} onClick={() => setCat(c)} className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all ${cat === c ? 'bg-white text-[#E63900] shadow-lg' : 'bg-white/20 hover:bg-white/30'}`}>
+                <span>{categoryIcons[c] || '🍽️'}</span><span>{c}</span>
+              </button>
             ))}
           </div>
         </div>
