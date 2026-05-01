@@ -59,11 +59,33 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8 mt-auto">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h3 className="font-bold mb-2">{BUSINESS.name}</h3>
-        <p className="text-gray-400 text-sm">{BUSINESS.locationShort}</p>
-        <p className="text-gray-500 text-xs mt-4">© 2024 {BUSINESS.name}</p>
+    <footer className="bg-stone-900 text-white py-12 mt-auto">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-black text-[#E63900] mb-3">{BUSINESS.name}</h3>
+            <p className="text-stone-400">{BUSINESS.subtitle}</p>
+          </div>
+          <div className="text-center">
+            <h4 className="font-bold mb-3">Contact</h4>
+            <p className="text-stone-400 text-sm mb-2">📍 {BUSINESS.locationShort}</p>
+            <a href={`tel:${BUSINESS.phone}`} className="text-stone-400 text-sm block hover:text-[#E63900]">📞 {BUSINESS.phoneDisplay}</a>
+            <a href={`https://wa.me/${BUSINESS.phone}`} className="text-[#25D366] text-sm font-bold mt-2 inline-block">💬 WhatsApp</a>
+          </div>
+          <div className="text-center md:text-right">
+            <h4 className="font-bold mb-3">Quick Links</h4>
+            <div className="flex flex-col gap-1 text-stone-400 text-sm">
+              <a href="/menu" className="hover:text-[#E63900]">🍽️ Menu</a>
+              <a href="/products" className="hover:text-[#E63900]">🛒 Products</a>
+              <a href="/offers" className="hover:text-[#E63900]">🏷️ Offers</a>
+              <a href="/about" className="hover:text-[#E63900]">ℹ️ About</a>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-stone-800 pt-6 text-center">
+          <p className="text-stone-500 text-sm">© 2024 {BUSINESS.name}. All rights reserved.</p>
+          <p className="text-stone-600 text-xs mt-1">Open: {BUSINESS.hours}</p>
+        </div>
       </div>
     </footer>
   )
@@ -77,7 +99,7 @@ function Home() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <div className="mb-2 text-4xl">🇮🇳 🌶️ 🍛</div>
+            <div className="mb-2 text-4xl">🇸🇦 🌶️ 🍛</div>
             <h1 className="text-6xl font-black mb-3 tracking-tight">{BUSINESS.name}</h1>
             <p className="text-2xl text-orange-200 font-medium mb-8">{BUSINESS.subtitle}</p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-10">
@@ -104,16 +126,23 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-4 -mt-12 relative z-20">
+      <section className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-2 md:grid-cols-4 gap-6">
         {[
-          { label: 'Location', icon: '📍', link: 'https://maps.google.com/?q=The+Bombay+Town+Al+Farazdaq+St+Riyadh' },
-          { label: 'Call', icon: '📞', link: `tel:${BUSINESS.phone}` },
-          { label: 'Menu', icon: '🍽️', link: '/menu' },
-          { label: 'About', icon: 'ℹ️', link: '/about' },
+          { label: 'Location', icon: '📍', image: 'https://images.unsplash.com/photo-1529154036614-a60975f5c760?w=400', link: 'https://maps.google.com/?q=The+Bombay+Town+Al+Farazdaq+St+Riyadh', desc: 'Find us' },
+          { label: 'Call', icon: '📞', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400', link: `tel:${BUSINESS.phone}`, desc: 'Order now' },
+          { label: 'Menu', icon: '🍽️', image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400', link: '/menu', desc: 'View dishes' },
+          { label: 'About', icon: 'ℹ️', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400', link: '/about', desc: 'Learn more' },
         ].map((item, i) => (
-          <a key={i} href={item.link} className="bg-white border-2 border-gray-200 rounded-xl p-4 text-center hover:border-[#E63900]">
-            <div className="text-2xl mb-1">{item.icon}</div>
-            <div className="text-xs font-bold">{item.label}</div>
+          <a key={i} href={item.link} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
+            <div className="relative h-32 overflow-hidden">
+              <img src={item.image} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-2 left-3 text-2xl">{item.icon}</div>
+            </div>
+            <div className="p-4 text-center">
+              <div className="font-bold text-lg text-gray-800 group-hover:text-[#E63900] transition-colors">{item.label}</div>
+              <div className="text-sm text-gray-500">{item.desc}</div>
+            </div>
           </a>
         ))}
       </section>
