@@ -1,0 +1,120 @@
+{
+  "categories": [
+    {
+      "id": "starters",
+      "name": "Starters",
+      "items": [
+        { "id": 1, "name": "Chicken Lollipop", "price": 25, "description": "Crispy chicken wings in spicy sauce", "popular": true, "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&q=80" },
+        { "id": 2, "name": "Chilli Chicken", "price": 30, "description": "Boneless chicken in hot garlic sauce", "popular": true, "image": "https://images.unsplash.com/photo-1569058242567-93de6f36f8e6?w=400&q=80" },
+        { "id": 3, "name": "Chicken 65", "price": 28, "description": "Spicy deep-fried chicken", "popular": false, "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80" },
+        { "id": 4, "name": "Paneer Tikka", "price": 32, "description": "Grilled cottage cheese with spices", "popular": false, "image": "https://images.unsplash.com/photo-1626072156819-2ec91b7d986c?w=400&q=80" },
+        { "id": 5, "name": "Vegetable Spring Rolls", "price": 20, "description": "Crispy rolls with mixed vegetables", "popular": false, "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80" },
+        { "id": 6, "name": "Fish Fry", "price": 35, "description": "Crispy fried fish pieces", "popular": false, "image": "https://images.unsplash.com/photo-1580476262798-bddd9f4c7369?w=400&q=80" },
+        { "id": 7, "name": "Chicken Wings", "price": 28, "description": "Spicy chicken wings", "popular": false, "image": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&q=80" },
+        { "id": 8, "name": "Crispy Prawns", "price": 40, "description": "Golden fried prawns", "popular": false, "image": "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "items": [
+        { "id": 9, "name": "Manchow Soup", "price": 18, "description": "Spicy veg soup with noodles", "popular": true, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+        { "id": 10, "name": "Hot & Sour Soup", "price": 16, "description": "Tangy and spicy soup", "popular": false, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+        { "id": 11, "name": "Clear Soup", "price": 14, "description": "Light vegetable soup", "popular": false, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+        { "id": 12, "name": "Chicken Soup", "price": 20, "description": "Hearty chicken broth", "popular": false, "image": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "rice-noodles",
+      "name": "Rice & Noodles",
+      "items": [
+        { "id": 13, "name": "Triple Rice", "price": 28, "description": "Rice with chicken, egg & veg", "popular": true, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 14, "name": "Fried Rice", "price": 22, "description": "Wok-tossed rice with vegetables", "popular": true, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 15, "name": "Schezwan Fried Rice", "price": 26, "description": "Spicy schezwan sauce fried rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 16, "name": "Hakka Noodles", "price": 24, "description": "Stir-fried noodles with vegetables", "popular": false, "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&q=80" },
+        { "id": 17, "name": "Singapore Fried Rice", "price": 30, "description": "Curry-flavored fried rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 18, "name": "Chicken Noodles", "price": 25, "description": "Noodles with chicken pieces", "popular": false, "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&q=80" },
+        { "id": 19, "name": "Vegetable Fried Rice", "price": 20, "description": "Mixed vegetables with rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 20, "name": "Egg Fried Rice", "price": 22, "description": "Rice with scrambled eggs", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "main-course",
+      "name": "Main Course",
+      "items": [
+        { "id": 21, "name": "Schezwan Chicken", "price": 32, "description": "Chicken in spicy schezwan sauce", "popular": true, "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&q=80" },
+        { "id": 22, "name": "Chicken Manchurian", "price": 30, "description": "Chicken balls in sweet sauce", "popular": true, "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&q=80" },
+        { "id": 23, "name": "Kung Pao Chicken", "price": 35, "description": "Spicy chicken with peanuts", "popular": false, "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&q=80" },
+        { "id": 24, "name": "Thai Curry", "price": 34, "description": "Coconut curry with vegetables", "popular": false, "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&q=80" },
+        { "id": 25, "name": "Chicken Tikka Masala", "price": 36, "description": "Creamy tomato-based curry", "popular": false, "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80" },
+        { "id": 26, "name": "Vegetable Manchurian", "price": 28, "description": "Veggie balls in sauce", "popular": false, "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&q=80" },
+        { "id": 27, "name": "Chicken Katsu", "price": 35, "description": "Breaded chicken cutlet", "popular": false, "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&q=80" },
+        { "id": 28, "name": "Egg Foo Young", "price": 28, "description": "Omelette in gravy", "popular": false, "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "biryani",
+      "name": "Biryani",
+      "items": [
+        { "id": 29, "name": "Chicken Biryani", "price": 35, "description": "Aromatic rice with chicken", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 30, "name": "Mutton Biryani", "price": 40, "description": "Tender mutton with basmati rice", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 31, "name": "Egg Biryani", "price": 28, "description": "Rice with boiled eggs", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 32, "name": "Veg Biryani", "price": 25, "description": "Mixed vegetables with aromatic rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 33, "name": "Prawns Biryani", "price": 45, "description": "Juicy prawns with fragrant rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 34, "name": "Fish Biryani", "price": 38, "description": "Flaky fish with spiced rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks & Beverages",
+      "items": [
+        { "id": 35, "name": "Pepsi (Regular)", "price": 8, "description": "500ml bottle", "popular": true, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+        { "id": 36, "name": "Pepsi (Large)", "price": 12, "description": "1L bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+        { "id": 37, "name": "Coca Cola", "price": 8, "description": "500ml bottle", "popular": true, "image": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&q=80" },
+        { "id": 38, "name": "7UP", "price": 8, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+        { "id": 39, "name": "Mirinda", "price": 8, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+        { "id": 40, "name": "Fresh Lime Water", "price": 10, "description": "Fresh lime with water", "popular": true, "image": "https://images.unsplash.com/photo-1629752187687-3d3c7ea3a002?w=400&q=80" },
+        { "id": 41, "name": "Mango Lassi", "price": 18, "description": "Sweet yogurt mango drink", "popular": true, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80" },
+        { "id": 42, "name": "Rose Lassi", "price": 15, "description": "Sweet yogurt drink", "popular": false, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80" },
+        { "id": 43, "name": "Masala Chai", "price": 12, "description": "Indian spiced tea", "popular": true, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+        { "id": 44, "name": "Green Tea", "price": 10, "description": "Healthy green tea", "popular": false, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+        { "id": 45, "name": "Black Coffee", "price": 12, "description": "Strong black coffee", "popular": false, "image": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80" },
+        { "id": 46, "name": "Masala Lemon Tea", "price": 14, "description": "Spiced lemon tea", "popular": false, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+        { "id": 47, "name": "Cold Coffee", "price": 20, "description": "Iced coffee with milk", "popular": false, "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" },
+        { "id": 48, "name": "Mineral Water", "price": 5, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1559839914-17aae19cec71?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "items": [
+        { "id": 49, "name": "Gulab Jamun", "price": 15, "description": "2 pieces", "popular": true, "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&q=80" },
+        { "id": 50, "name": "Ice Cream (Vanilla)", "price": 20, "description": "2 scoops", "popular": false, "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&q=80" },
+        { "id": 51, "name": "Ice Cream (Chocolate)", "price": 20, "description": "2 scoops", "popular": false, "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&q=80" },
+        { "id": 52, "name": "Rasmalai", "price": 25, "description": "3 pieces", "popular": false, "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&q=80" },
+        { "id": 53, "name": "Brownie with Ice Cream", "price": 30, "description": "Chocolate brownie with scoop", "popular": false, "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&q=80" },
+        { "id": 54, "name": "Fruit Salad", "price": 18, "description": "Seasonal fresh fruits", "popular": false, "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" }
+      ]
+    },
+    {
+      "id": "combos",
+      "name": "Special Combos",
+      "items": [
+        { "id": 55, "name": "Family Pack (4 persons)", "price": 120, "description": "4 Biryani + 4 Drinks + Dessert", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 56, "name": "Couple Combo", "price": 70, "description": "2 Biryani + 2 Drinks", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+        { "id": 57, "name": "Chicken Special", "price": 85, "description": "Chicken Biryani + Chicken Lollipop + Pepsi", "popular": false, "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&q=80" },
+        { "id": 58, "name": "Veggie Delight", "price": 60, "description": "Veg Biryani + Veg Manchurian + Water", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 59, "name": "Quick Bite", "price": 45, "description": "Fried Rice + Chicken 65 + Water", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+        { "id": 60, "name": "Mutton Lover", "price": 95, "description": "Mutton Biryani + Mutton Curry + Chai", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" }
+      ]
+    }
+  ],
+  "offers": [
+    { "id": 1, "title": "Family Feast", "description": "Get 20% off on Family Pack", "discount": "20% OFF", "code": "FAMILY20", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=80" },
+    { "id": 2, "title": "Free Drink", "description": "Free Pepsi with any Biryani", "discount": "FREE", "code": "BIRYANI50", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&q=80" },
+    { "id": 3, "title": "Lunch Special", "description": "20% off on orders above SAR 100", "discount": "20% OFF", "code": "LUNCH20", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80" },
+    { "id": 4, "title": "New Customer", "description": "15% off for first order", "discount": "15% OFF", "code": "HELLO15", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" },
+    { "id": 5, "title": "Combo Deal", "description": "Buy 1 Get 1 Free on Lassi", "discount": "BOGO", "code": "LASSI2", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=600&q=80" },
+    { "id": 6, "title": "Weekend Special", "description": "25% off on weekends", "discount": "25% OFF", "code": "WEEKEND25", "validUntil": "2024-12-31", "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" }
+  ]
+}

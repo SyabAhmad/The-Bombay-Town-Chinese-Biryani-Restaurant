@@ -1,0 +1,14 @@
+{
+  "id": "starters",
+  "name": "Starters",
+  "items": [
+    { "id": 1, "name": "Chicken Lollipop", "price": 25, "description": "Crispy chicken wings in spicy sauce", "popular": true, "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&q=80" },
+    { "id": 2, "name": "Chilli Chicken", "price": 30, "description": "Boneless chicken in hot garlic sauce", "popular": true, "image": "https://images.unsplash.com/photo-1569058242567-93de6f36f8e6?w=400&q=80" },
+    { "id": 3, "name": "Chicken 65", "price": 28, "description": "Spicy deep-fried chicken", "popular": false, "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80" },
+    { "id": 4, "name": "Paneer Tikka", "price": 32, "description": "Grilled cottage cheese with spices", "popular": false, "image": "https://images.unsplash.com/photo-1626072156819-2cb5c0721cc6?w=400&q=80" },
+    { "id": 5, "name": "Vegetable Spring Rolls", "price": 20, "description": "Crispy rolls with mixed vegetables", "popular": false, "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80" },
+    { "id": 6, "name": "Fish Fry", "price": 35, "description": "Crispy fried fish pieces", "popular": false, "image": "https://images.unsplash.com/photo-1580476262798-bddd9f4c7369?w=400&q=80" },
+    { "id": 7, "name": "Chicken Wings", "price": 28, "description": "Spicy chicken wings", "popular": false, "image": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&q=80" },
+    { "id": 8, "name": "Crispy Prawns", "price": 40, "description": "Golden fried prawns", "popular": false, "image": "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&q=80" }
+  ]
+}

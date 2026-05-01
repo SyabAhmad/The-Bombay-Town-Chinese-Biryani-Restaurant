@@ -1,0 +1,20 @@
+{
+  "id": "drinks",
+  "name": "Drinks & Beverages",
+  "items": [
+    { "id": 35, "name": "Pepsi (Regular)", "price": 8, "description": "500ml bottle", "popular": true, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+    { "id": 36, "name": "Pepsi (Large)", "price": 12, "description": "1L bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+    { "id": 37, "name": "Coca Cola", "price": 8, "description": "500ml bottle", "popular": true, "image": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&q=80" },
+    { "id": 38, "name": "7UP", "price": 8, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+    { "id": 39, "name": "Mirinda", "price": 8, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=80" },
+    { "id": 40, "name": "Fresh Lime Water", "price": 10, "description": "Fresh lime with water", "popular": true, "image": "https://images.unsplash.com/photo-1629752187687-3d3c7ea3a002?w=400&q=80" },
+    { "id": 41, "name": "Mango Lassi", "price": 18, "description": "Sweet yogurt mango drink", "popular": true, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80" },
+    { "id": 42, "name": "Rose Lassi", "price": 15, "description": "Sweet yogurt drink", "popular": false, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80" },
+    { "id": 43, "name": "Masala Chai", "price": 12, "description": "Indian spiced tea", "popular": true, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+    { "id": 44, "name": "Green Tea", "price": 10, "description": "Healthy green tea", "popular": false, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+    { "id": 45, "name": "Black Coffee", "price": 12, "description": "Strong black coffee", "popular": false, "image": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80" },
+    { "id": 46, "name": "Masala Lemon Tea", "price": 14, "description": "Spiced lemon tea", "popular": false, "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80" },
+    { "id": 47, "name": "Cold Coffee", "price": 20, "description": "Iced coffee with milk", "popular": false, "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" },
+    { "id": 48, "name": "Mineral Water", "price": 5, "description": "500ml bottle", "popular": false, "image": "https://images.unsplash.com/photo-1559839914-17aae19cec71?w=400&q=80" }
+  ]
+}

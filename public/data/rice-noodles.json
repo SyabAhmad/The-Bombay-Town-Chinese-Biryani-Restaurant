@@ -1,0 +1,14 @@
+{
+  "id": "rice-noodles",
+  "name": "Rice & Noodles",
+  "items": [
+    { "id": 13, "name": "Triple Rice", "price": 28, "description": "Rice with chicken, egg & veg", "popular": true, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 14, "name": "Fried Rice", "price": 22, "description": "Wok-tossed rice with vegetables", "popular": true, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 15, "name": "Schezwan Fried Rice", "price": 26, "description": "Spicy schezwan sauce fried rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 16, "name": "Hakka Noodles", "price": 24, "description": "Stir-fried noodles with vegetables", "popular": false, "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&q=80" },
+    { "id": 17, "name": "Singapore Fried Rice", "price": 30, "description": "Curry-flavored fried rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 18, "name": "Chicken Noodles", "price": 25, "description": "Noodles with chicken pieces", "popular": false, "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&q=80" },
+    { "id": 19, "name": "Vegetable Fried Rice", "price": 20, "description": "Mixed vegetables with rice", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 20, "name": "Egg Fried Rice", "price": 22, "description": "Rice with scrambled eggs", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" }
+  ]
+}

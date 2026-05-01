@@ -1,0 +1,10 @@
+{
+  "id": "soups",
+  "name": "Soups",
+  "items": [
+    { "id": 9, "name": "Manchow Soup", "price": 18, "description": "Spicy veg soup with noodles", "popular": true, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+    { "id": 10, "name": "Hot & Sour Soup", "price": 16, "description": "Tangy and spicy soup", "popular": false, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+    { "id": 11, "name": "Clear Soup", "price": 14, "description": "Light vegetable soup", "popular": false, "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" },
+    { "id": 12, "name": "Chicken Soup", "price": 20, "description": "Hearty chicken broth", "popular": false, "image": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=400&q=80" }
+  ]
+}

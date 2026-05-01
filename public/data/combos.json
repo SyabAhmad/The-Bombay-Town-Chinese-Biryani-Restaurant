@@ -1,0 +1,12 @@
+{
+  "id": "combos",
+  "name": "Special Combos",
+  "items": [
+    { "id": 55, "name": "Family Pack (4 persons)", "price": 120, "description": "4 Biryani + 4 Drinks + Dessert", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 56, "name": "Couple Combo", "price": 70, "description": "2 Biryani + 2 Drinks", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 57, "name": "Chicken Special", "price": 85, "description": "Chicken Biryani + Chicken Lollipop + Pepsi", "popular": false, "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&q=80" },
+    { "id": 58, "name": "Veggie Delight", "price": 60, "description": "Veg Biryani + Veg Manchurian + Water", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 59, "name": "Quick Bite", "price": 45, "description": "Fried Rice + Chicken 65 + Water", "popular": false, "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" },
+    { "id": 60, "name": "Mutton Lover", "price": 95, "description": "Mutton Biryani + Mutton Curry + Chai", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" }
+  ]
+}

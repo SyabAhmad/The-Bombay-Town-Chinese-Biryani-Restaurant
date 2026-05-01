@@ -1,0 +1,12 @@
+{
+  "id": "biryani",
+  "name": "Biryani",
+  "items": [
+    { "id": 29, "name": "Chicken Biryani", "price": 35, "description": "Aromatic rice with chicken", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 30, "name": "Mutton Biryani", "price": 40, "description": "Tender mutton with basmati rice", "popular": true, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 31, "name": "Egg Biryani", "price": 28, "description": "Rice with boiled eggs", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 32, "name": "Veg Biryani", "price": 25, "description": "Mixed vegetables with aromatic rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 33, "name": "Prawns Biryani", "price": 45, "description": "Juicy prawns with fragrant rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" },
+    { "id": 34, "name": "Fish Biryani", "price": 38, "description": "Flaky fish with spiced rice", "popular": false, "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80" }
+  ]
+}
