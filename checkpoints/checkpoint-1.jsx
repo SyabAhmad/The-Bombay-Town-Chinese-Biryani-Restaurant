@@ -72,35 +72,22 @@ function Footer() {
 function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-b from-[#E63900] to-[#C43200] text-white py-20 relative overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=1200" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <section className="bg-[#E63900] text-white py-16 md:py-20 relative overflow-hidden">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <div className="mb-2 text-4xl">🇮🇳 🌶️ 🍛</div>
-            <h1 className="text-6xl font-black mb-3 tracking-tight">{BUSINESS.name}</h1>
-            <p className="text-2xl text-orange-200 font-medium mb-8">{BUSINESS.subtitle}</p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-10">
-              <a href={`https://wa.me/${BUSINESS.phone}?text=Hi`} className="bg-[#25D366] hover:bg-[#20BD5A] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2">
-                <span className="text-xl">💬</span> Order on WhatsApp
-              </a>
-              <a href={`tel:${BUSINESS.phone}`} className="bg-white/20 hover:bg-white/30 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2">
-                <span className="text-xl">📞</span> Call Now
-              </a>
+            <h1 className="text-5xl font-black mb-4">{BUSINESS.name}</h1>
+            <p className="text-xl text-orange-200 mb-6">{BUSINESS.subtitle}</p>
+            <div className="flex justify-center md:justify-start gap-4 mb-8">
+              <a href={`https://wa.me/${BUSINESS.phone}?text=Hi`} className="bg-[#25D366] px-6 py-3 rounded-xl font-bold">Order on WhatsApp</a>
+              <a href={`tel:${BUSINESS.phone}`} className="bg-white/20 px-6 py-3 rounded-xl font-bold">Call</a>
             </div>
-            <div className="flex justify-center md:justify-start gap-6 mb-6">
-              <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-3">
-                <div className="text-3xl font-black">★ {BUSINESS.rating}</div>
-                <div className="text-orange-200 font-medium text-sm">{BUSINESS.reviews}+ Reviews</div>
-              </div>
-              <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-3">
-                <div className="text-3xl font-black">{BUSINESS.priceRange}</div>
-                <div className="text-orange-200 font-medium text-sm">per person</div>
-              </div>
+            <div className="flex justify-center md:justify-start gap-6">
+              <div className="text-center"><div className="text-3xl font-black">★ {BUSINESS.rating}</div><div className="text-orange-200 text-sm">{BUSINESS.reviews}+ reviews</div></div>
+              <div className="text-center"><div className="text-3xl font-black">{BUSINESS.priceRange}</div><div className="text-orange-200 text-sm">per person</div></div>
             </div>
-            <div className="text-white/70">📍 {BUSINESS.locationShort}</div>
           </div>
           <div className="hidden md:block">
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=600" className="w-full h-64 object-cover rounded-2xl shadow-2xl" />
           </div>
         </div>
       </section>
